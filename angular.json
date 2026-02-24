@@ -32,6 +32,12 @@
           },
           "configurations": {
             "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractLicenses": true,
+              "namedChunks": false,
+              "buuildOptimizer": true,  
               "budgets": [
                 {
                   "type": "initial",
@@ -87,5 +93,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "5aa1db4b-268d-45de-9f3b-7962eec0257e"
   }
 }
