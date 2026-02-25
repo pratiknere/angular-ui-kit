@@ -1,8 +1,8 @@
-@if(isOpen()){
+@if(modalService.modalStack().length > 0) {
     <div class="overlay">
         <div class="modal">
             <button class="close" (click)="close()">X</button>
-            <ng-content></ng-content>
+            <ng-container #modalHost></ng-container>
         </div>
 
     </div>

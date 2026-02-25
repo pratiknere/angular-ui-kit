@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ButtonComponent } from '../shared/ui/button/button';
 import { ModalService } from '../core/modal/modal';
 import { ModalComponent } from "../shared/ui/modal/modal";
+import { DeleteUser } from './delete-user/delete-user';
 
 @Component({
   selector: 'app-demo',
@@ -16,7 +17,9 @@ export class Demo {
   private modalService = inject(ModalService);
 
   openModal() : void {
-    this.modalService.open();
+    this.modalService.open(DeleteUser,{
+      userName: 'Pratik Nere'
+    });
   }
 
 }
