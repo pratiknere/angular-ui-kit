@@ -1,6 +1,10 @@
 @if(modalService.modalStack().length > 0) {
     <div class="overlay">
-        <div class="modal">
+        <div class="modal"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="modal-title"
+             tabindex="-1">
             <button class="close" (click)="close()">X</button>
             <ng-container #modalHost></ng-container>
         </div>
